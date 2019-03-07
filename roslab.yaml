@@ -1,16 +1,16 @@
 name: btraj
 
-distro: kinetic
+base: 
+  ubuntu: 16.04
+  ros: kinetic-ros-base
+  opengl: runtime
 
 build: catkin_make
 
-runtime: nvidia
-
-packages:
+apt:
   - libarmadillo-dev
 
 source:
   - name: plan_utils
     repo: https://github.com/HKUST-Aerial-Robotics/plan_utils.git
-    depends:
     build: catkin_make
