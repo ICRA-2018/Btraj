@@ -9,6 +9,8 @@ build: catkin_make
 
 apt:
   - libarmadillo-dev
+  - libpcl-dev
+  - libpcl-conversions-dev
 
 source:
   - name: plan_utils
