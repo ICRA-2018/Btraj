@@ -64,7 +64,7 @@ RUN rosdep init \
 # install ros packages
 ENV ROS_DISTRO kinetic
 RUN apt-get -o Acquire::ForceIPv4=true update && apt-get -o Acquire::ForceIPv4=true install -y \
-    ros-kinetic-ros-base=1.3.2-0* \
+    ros-kinetic-desktop=1.3.2-0* \
     && rm -rf /var/lib/apt/lists/*
 
 # setup entrypoint
@@ -79,6 +79,7 @@ RUN apt-get -o Acquire::ForceIPv4=true update \
     libarmadillo-dev \
     libpcl-dev \
     libpcl-conversions-dev \
+    ros-kinetic-multi-map-server \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 

@@ -2,7 +2,7 @@ name: btraj
 
 base: 
   ubuntu: 16.04
-  ros: kinetic-ros-base
+  ros: kinetic-desktop
   opengl: runtime
 
 build: catkin_make
@@ -11,8 +11,10 @@ apt:
   - libarmadillo-dev
   - libpcl-dev
   - libpcl-conversions-dev
+  - ros-kinetic-multi-map-server
 
 source:
   - name: plan_utils
     repo: https://github.com/HKUST-Aerial-Robotics/plan_utils.git
     build: catkin_make
+
